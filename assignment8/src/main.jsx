@@ -7,6 +7,7 @@ import { RouterProvider } from "react-router/dom";
 import Root from '../public/component/Root.jsx';
 import Home from '../public/component/Home.jsx';
 import Allcard from '../public/component/Allcard.jsx';
+import Appdetels from '../public/component/Appdetels.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
         {
           path:'/allcard',
           Component:Allcard,
+          loader:()=>fetch('/alldata.json').then(res=>res.json())
+        },
+        {
+          path:'/appdetels/:id',
+          Component:Appdetels,
           loader:()=>fetch('/alldata.json').then(res=>res.json())
         }
     ]

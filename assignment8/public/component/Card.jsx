@@ -1,9 +1,11 @@
 import React from 'react';
 import download from '../assets/icon-downloads.png'
 import rating from '../assets/icon-ratings.png'
+import { Link } from 'react-router';
 
 const Card = ({card}) => {
     return (
+      <Link to={`/appdetels/${card.id}`}>
         <div className='bg-white p-8 rounded-xl shadow-2xl mt-7'>
             <img className='w-[400px] w-full h-[300px] rounded-xl ' src={card.image} alt="" />
             <h2 className='text-left text-3xl font-bold my-3'>{card.title}</h2>
@@ -14,6 +16,7 @@ const Card = ({card}) => {
 
             </div>
         </div>
+      </Link>
     );
 };
 
