@@ -1,0 +1,90 @@
+[
+  {
+    "image": "../assets/demo-app (1).webp",
+    "title": "PhotoSnap",
+    "companyName": "PixelSoft Studios",
+    "id": 1,
+    "description": "Capture, edit, and share your best moments with PhotoSnap’s advanced photo tools and filters.",
+    "size": 45,
+    "reviews": 12000,
+    "ratingAvg": 4.6,
+    "downloads": 5000000
+  },
+  {
+    "image": "../assets/demo-app (2).webp",
+    "title": "TaskMaster",
+    "companyName": "WorkZen Labs",
+    "id": 2,
+    "description": "Organize your day and boost productivity with TaskMaster’s smart task management system.",
+    "size": 32,
+    "reviews": 9500,
+    "ratingAvg": 4.4,
+    "downloads": 4200000
+  },
+  {
+    "image": "../assets/demo-app (3).webp",
+    "title": "FitLife Tracker",
+    "companyName": "ActivePulse Inc.",
+    "id": 3,
+    "description": "Track your workouts, calories, and goals with real-time data and personalized insights.",
+    "size": 58,
+    "reviews": 17000,
+    "ratingAvg": 4.8,
+    "downloads": 8000000
+  },
+  {
+    "image": "../assets/demo-app (4).webp",
+    "title": "NoteEase",
+    "companyName": "BrightMind Apps",
+    "id": 4,
+    "description": "A fast and minimalist note-taking app that syncs across all your devices seamlessly.",
+    "size": 20,
+    "reviews": 7500,
+    "ratingAvg": 4.3,
+    "downloads": 2500000
+  },
+  {
+    "image": "../assets/demo-app (5).webp",
+    "title": "Learnify",
+    "companyName": "EduVerse Ltd.",
+    "id": 5,
+    "description": "Interactive courses and tutorials to help you learn coding, design, and business skills.",
+    "size": 76,
+    "reviews": 26000,
+    "ratingAvg": 4.7,
+    "downloads": 12000000
+  },
+  {
+    "image": "../assets/demo-app (6).webp",
+    "title": "QuickPay",
+    "companyName": "FinConnect Pvt. Ltd.",
+    "id": 6,
+    "description": "Send and receive money instantly with QuickPay’s secure and reliable payment system.",
+    "size": 38,
+    "reviews": 18500,
+    "ratingAvg": 4.5,
+    "downloads": 9500000
+  },
+  {
+    "image": "../assets/demo-app (1).webp",
+    "title": "GameZone",
+    "companyName": "MegaPlay Studios",
+    "id": 7,
+    "description": "Discover, download, and play hundreds of free and premium mobile games in one place.",
+    "size": 90,
+    "reviews": 30000,
+    "ratingAvg": 4.2,
+    "downloads": 18000000
+  },
+  {
+    "image": "../assets/demo-app (2).webp",
+    "title": "MusicHub",
+    "companyName": "RhythmCloud Inc.",
+    "id": 8,
+    "description": "Stream millions of songs, create playlists, and discover new artists daily.",
+    "size": 68,
+    "reviews": 28000,
+    "ratingAvg": 4.6,
+    "downloads": 25000000
+  }
+]
