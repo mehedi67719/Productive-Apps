@@ -16,7 +16,7 @@ const Navbar = () => {
             <div className='flex list-none gap-10'>
                 <Link to='/'><li>Home</li></Link>
                 <Link to='/allcard'><li>Apps</li></Link>
-                <li>Installation</li>
+                <Link to='/installapp'><li>Installation</li></Link>
             </div>
 
             <button className='font-bold bg-gradient-to-r from-[#632EE3] to-[#9F62F2] p-2 '> <a className='flex gap-1 items-center' href="https://github.com/mehedi67719" ><FaGithub /> Contribute</a></button>

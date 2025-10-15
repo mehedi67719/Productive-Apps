@@ -8,6 +8,7 @@ import Root from '../public/component/Root.jsx';
 import Home from '../public/component/Home.jsx';
 import Allcard from '../public/component/Allcard.jsx';
 import Appdetels from '../public/component/Appdetels.jsx';
+import Myinstallation from '../public/component/Myinstallation.jsx';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
           path:'/appdetels/:id',
           Component:Appdetels,
           loader:()=>fetch('/alldata.json').then(res=>res.json())
+        },
+        {
+          path:'/installapp',
+          Component:Myinstallation,
         }
     ]
   }

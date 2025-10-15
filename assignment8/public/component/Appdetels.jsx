@@ -1,5 +1,5 @@
-import React from 'react';
-import { useLoaderData, useParams } from 'react-router';
+import React, { useState } from 'react';
+import { Link, useLoaderData, useParams } from 'react-router';
 import download from '../assets/icon-downloads.png'
 import review from '../assets/icon-review.png'
 import rating from '../assets/icon-ratings.png'
@@ -8,9 +8,22 @@ const Appdetels = () => {
 
     const {id}=useParams();
     const alldata=useLoaderData();
+
+
+
     
     const app=alldata.find(item=>item.id===parseInt(id));
-    // console.log(app)
+    const [install,setinstall]=useState(false)
+     const handelclick=()=>{
+        setinstall(true);
+        const saveapp=JSON.parse(localStorage.getItem(`installapp`))|| [];
+        const chakeitem=saveapp.find(item=>item.id===app.id);
+        if(!chakeitem){
+            saveapp.push(app);
+            localStorage.setItem(`installapp`, JSON.stringify(saveapp))
+        }
+        
+     }
     return (
         <div className='max-w-[90%] mx-auto mt-20'>
             <div className='flex'>
@@ -42,7 +55,7 @@ const Appdetels = () => {
 
                         </div>
                     </div>
-                    <button className='p-2 bg-green-400 rounded-sm mt-3'>Install Now ({app.size} MB)</button>
+                    <Link to='/installapp'><button onClick={handelclick} disabled={install} className={`${install? "p-2 bg-gray-400 rounded-sm mt-3" :'p-2 bg-green-400 rounded-sm mt-3'}`}>{install?"Installed": `Install Now ({app.size} MB)`}</button></Link>
                 </div>
                 
             </div>
