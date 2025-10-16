@@ -7,7 +7,7 @@ const Installdata = ({data,cardclick}) => {
             <div className='flex justify-between items-center w-full ml-7'>
                 <div  >
                   <h2 className='text-2xl my-2 font-bold'>{data.title}</h2>
-                  <div className='flex gap-10'>
+                  <div className='flex gap-5 lg:gap-10'>
                       <p className='text-green-500'>{data.downloads}</p>
                       <p className='text-orange-400'>{data.ratingAvg}</p>
                       <p>{data.size} MB</p>

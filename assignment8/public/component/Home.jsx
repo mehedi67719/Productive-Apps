@@ -19,7 +19,7 @@ const Home = () => {
                 <p className='mb-4'>Explore All Trending Apps on the Market developed by us</p>
 
 
-                 <div className='grid grid-cols-4 gap-8 max-w-[95%] mx-auto '>
+                 <div className='grid lg:grid-cols-4 grid-cols-1 gap-8 max-w-[95%] mx-auto '>
                  {
                     data.map(card=><Card card={card}></Card>)
                     }

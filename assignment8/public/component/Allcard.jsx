@@ -23,7 +23,7 @@ const Allcard = () => {
                 allfilter.length===0? (
                     <h2 className='text-center text-6xl font-bold'>app is not found</h2>
                 ):
-                  <div className='grid grid-cols-4 gap-8 '>
+                  <div className='grid grid-cols-1 lg:grid-cols-4 gap-8 '>
                       
                     {
                         allfilter.map(card=><Allappcard card={card} ></Allappcard>)

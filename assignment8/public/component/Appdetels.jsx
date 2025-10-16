@@ -1,23 +1,34 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';
 import download from '../assets/icon-downloads.png'
 import review from '../assets/icon-review.png'
 import rating from '../assets/icon-ratings.png'
+
+
 
 const Appdetels = () => {
 
     const {id}=useParams();
     const alldata=useLoaderData();
 
-
+     
 
     
     const app=alldata.find(item=>item.id===parseInt(id));
     const [install,setinstall]=useState(false)
+
+    useEffect(() => {
+        const savedApps = JSON.parse(localStorage.getItem('installapp')) || [];
+        const isInstalled = savedApps.find(item => item.id === app.id);
+        if (isInstalled) {
+            setinstall(true); 
+        }})
+
      const handelclick=()=>{
         setinstall(true);
         const saveapp=JSON.parse(localStorage.getItem(`installapp`))|| [];
         const chakeitem=saveapp.find(item=>item.id===app.id);
+
         if(!chakeitem){
             saveapp.push(app);
             localStorage.setItem(`installapp`, JSON.stringify(saveapp))
@@ -26,9 +37,9 @@ const Appdetels = () => {
      }
     return (
         <div className='max-w-[90%] mx-auto mt-20'>
-            <div className='flex'>
+            <div className='flex flex-col lg:flex-row'>
                 <img src={app.image} alt="" />
-                <div className='ml-10 w-full'>
+                <div className='lg:ml-10 w-full'>
                     <h2 className='text-3xl font-bold mb-4'>{app.title}</h2>
                     <p className='mb-2'>Developed by <span className='text-[#632EE3] font-bold'>{app.companyName}</span></p>
                      <hr className='w-full text-gray-400 ' />
@@ -60,6 +71,10 @@ const Appdetels = () => {
                 
             </div>
             <hr className='w-full my-4 text-gray-400'/>
+
+
+           
+
 
             <div>
                 <h2 className='text-2xl font-bold'>Description</h2>

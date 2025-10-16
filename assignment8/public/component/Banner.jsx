@@ -6,7 +6,7 @@ import { FaAppStoreIos } from "react-icons/fa6";
 const Banner = () => {
     return (
         <div >
-           <div className=' flex flex-col max-w-6xl mx-auto justify-center gap-10'>
+           <div className=' flex flex-col max-w-6xl mx-auto justify-center gap-10 mx-1'>
                 <div className='text-center'>
                    <h2 className='text-6xl font-bold my-8'>We Build <br /> <span className='text-[#632EE3]'>Productive</span> Apps</h2>
                    <p>At HERO.IO , we craft innovative apps designed to make everyday life simpler, smarter, and more exciting.Our goal is to <br /> turn your ideas into digital experiences that truly make an impact.</p>
@@ -22,7 +22,7 @@ const Banner = () => {
            <div className='p-10 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-center  text-white'>
             <h2 className='text-4xl font-bold'>Trusted by Millions, Built for You</h2>
 
-            <div className='flex justify-around my-10'>
+            <div className='flex flex-col lg:flex-row justify-around my-10'>
                 <div >
                     <p>Total Downloads</p>
                     <h2 className='text-5xl my-2.5 font-bold'>29.6M</h2>
