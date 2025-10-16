@@ -3,6 +3,7 @@ import { Link, useLoaderData, useParams } from 'react-router';
 import download from '../assets/icon-downloads.png'
 import review from '../assets/icon-review.png'
 import rating from '../assets/icon-ratings.png'
+  import { ToastContainer, toast } from 'react-toastify';
 
 
 
@@ -22,12 +23,14 @@ const Appdetels = () => {
         const isInstalled = savedApps.find(item => item.id === app.id);
         if (isInstalled) {
             setinstall(true); 
-        }})
+            
+        }},[app.id])
 
      const handelclick=()=>{
         setinstall(true);
         const saveapp=JSON.parse(localStorage.getItem(`installapp`))|| [];
         const chakeitem=saveapp.find(item=>item.id===app.id);
+        toast.success(`${app.title} has been installed!`);
 
         if(!chakeitem){
             saveapp.push(app);
@@ -67,6 +70,7 @@ const Appdetels = () => {
                         </div>
                     </div>
                     <Link to='/installapp'><button onClick={handelclick} disabled={install} className={`${install? "p-2 bg-gray-400 rounded-sm mt-3" :'p-2 bg-green-400 rounded-sm mt-3'}`}>{install?"Installed": `Install Now ({app.size} MB)`}</button></Link>
+                    
                 </div>
                 
             </div>
@@ -80,6 +84,7 @@ const Appdetels = () => {
                 <h2 className='text-2xl font-bold'>Description</h2>
                 <p>{app.description}</p>
             </div>
+            {/* <ToastContainer /> */}
         </div>
     );
 };

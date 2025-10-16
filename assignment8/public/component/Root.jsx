@@ -1,16 +1,25 @@
 import React from 'react';
 import Navbar from './Navbar';
-import { Outlet } from 'react-router';
+import { Outlet, useRouteError } from 'react-router';
 import Footer from './Footer';
+import Error from './Error';
 
-const Root = () => {
+
+   const Root=()=>{
+      const error=useRouteError();
+
+ 
     return (
+
+        
         <div>
             <Navbar></Navbar>
-            <Outlet></Outlet>
+            {
+             error?<Error></Error>:<Outlet></Outlet>
+            }
             <Footer></Footer>
         </div>
     );
-};
+}
 
 export default Root;

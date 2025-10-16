@@ -9,11 +9,13 @@ import Home from '../public/component/Home.jsx';
 import Allcard from '../public/component/Allcard.jsx';
 import Appdetels from '../public/component/Appdetels.jsx';
 import Myinstallation from '../public/component/Myinstallation.jsx';
+import Error from '../public/component/Error.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component:Root,
+    errorElement:<Root></Root>,
     children:[
         {
           index:true,
