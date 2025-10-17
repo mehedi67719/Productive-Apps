@@ -4,12 +4,12 @@ import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
-import Root from '../public/component/Root.jsx';
-import Home from '../public/component/Home.jsx';
-import Allcard from '../public/component/Allcard.jsx';
-import Appdetels from '../public/component/Appdetels.jsx';
-import Myinstallation from '../public/component/Myinstallation.jsx';
-import Error from '../public/component/Error.jsx';
+import Root from './component/Root.jsx';
+import Home from './component/Home.jsx';
+import Allcard from './component/Allcard.jsx';
+import Appdetels from './component/Appdetels.jsx';
+import Myinstallation from './component/Myinstallation.jsx';
+import { ToastContainer } from 'react-toastify';
 
 const router = createBrowserRouter([
   {
@@ -47,5 +47,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
      <RouterProvider router={router} />
+     <ToastContainer />
   </StrictMode>,
 )
