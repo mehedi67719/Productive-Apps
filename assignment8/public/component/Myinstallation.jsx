@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Installdata from './Installdata';
 
+import { ToastContainer, toast } from 'react-toastify';
+
 const Myinstallation = () => {
 
     const [installapp,setinstallapp]=useState([]);
@@ -33,6 +35,8 @@ const Myinstallation = () => {
         const filtered=installapp.filter(app=>app.id !==id);
         setinstallapp(filtered);
         localStorage.setItem(`installapp`,JSON.stringify(filtered));
+        toast("Wow so easy!");
+
     }
     
     return (
@@ -63,10 +67,10 @@ const Myinstallation = () => {
             </div>
             <div className='mt-10 flex flex-col gap-10'>
                 {
-                    installapp.map(data=><Installdata data={data} cardclick={cardclick}></Installdata>)
+                    installapp.map(data=><Installdata key={data.id} data={data} cardclick={cardclick}></Installdata>)
                 }
             </div>
-
+            {/* <ToastContainer /> */}
         </div>
     );
 };
