@@ -7,7 +7,9 @@
 ---
 
 ## 🚀 Project Overview
-Productive Apps is a **React-based frontend application** focused on managing daily tasks, notes, and reminders efficiently. The interface is clean, responsive, and easy to use on any device.
+**Productive Apps** is a **React-based frontend application** designed to manage daily tasks, notes, and reminders efficiently. The interface is clean, responsive, and user-friendly across all devices.
+
+The project covers **Home**, **Tasks**, **Notes**, **Reminders**, and **App Details**, with smooth SPA navigation and local storage integration for installed apps.
 
 ---
 
@@ -19,35 +21,36 @@ Productive Apps is a **React-based frontend application** focused on managing da
 
 ## ⭐ Features
 - 🎨 **Modern, Responsive UI**  
-  - Clean and user-friendly interface  
+  - Clean, user-friendly interface  
   - Fully responsive for desktop, tablet, and mobile  
 - ✅ **Task Management**  
   - Add, Edit, Delete tasks  
 - 📝 **Notes & Reminders**  
   - Create and manage notes  
-  - Set reminders  
+  - Set reminders for tasks  
 - 🔔 **Smooth Notifications**  
   - Toast notifications (no default alerts)  
 - 🌐 **SPA Experience**  
   - Smooth navigation between pages  
+- 💾 **Local Storage Integration**  
+  - Save installed apps locally  
+  - Prevent duplicate installations  
 
 ---
 
 ## 📄 Pages Included
-- Home Page  
-- Tasks Page  
-- Notes Page  
-- Reminder Page  
-- 404 Error Page  
+- **Home Page** – Banner, States, Top Apps  
+- **All Apps Page** – App Listing, Search, No Apps Found state  
+- **Details Page** – App Information, Reviews with responsive chart  
+- **Installation Page** – Installed Apps List  
+- **404 Error Page** – Invalid routes handling  
 
 ---
 
-## 🛠️ Tech Stack (Frontend)
-- React.js  
-- JavaScript  
-- HTML5 / CSS3  
-- Tailwind CSS  
-- React Router  
+## 🛠️ Tech Stack
+- **Frontend:** React.js, JavaScript, HTML5, CSS3, Tailwind CSS  
+- **Routing:** React Router  
+- **State Management:** React Hooks (useState, useEffect)  
 
 ---
 
@@ -62,11 +65,13 @@ Productive Apps is a **React-based frontend application** focused on managing da
 ---
 
 ## 🔧 Core Functionalities
-- Add, Edit, Delete tasks  
+- Add, edit, delete tasks  
 - Create and manage notes  
 - Set reminders for tasks  
 - Smooth SPA navigation  
 - Toast notifications for actions  
+- Save installed apps to local storage  
+- Disable install button for already installed apps  
 
 ---
 
